@@ -77,3 +77,86 @@ obj = Child()
 obj.greet_father()
 obj.greet_mother()
 
+
+
+
+# MULTILEVEL INHERITANCE  --> One child class becomes parent of another class
+
+class A: # Super Parent Class
+    def greet(self):
+        print('This is Class A')
+
+class B(A):  # Parent Class
+    def show(self):
+        print("This Is Class B")
+        
+class C(B):  # Child Class
+    def detail(self):
+        print("This is Class C")
+        
+obj=C()
+obj.show()
+obj.detail()
+obj.greet()
+    
+    
+    
+class CEO:  # Super Parent Class
+    def __init__(self):
+        print("This is a CEO class constructor")
+        
+class Manager(CEO):   # Parent Class
+    def __init__(self):
+        super().__init__()
+        print("This is a Manager class constructor")
+        
+class Employee(Manager):  # Child Class
+    def __init__(self):
+        super().__init__()
+        print("This is Employee Class Constructor")
+    
+kill = Employee()
+
+
+
+# HIERARCHIAL INHERITANCE --> 1 Parent class and multiple Child Class
+
+class Parent:
+    def greet(self):
+        print("This is Parent Class")
+        
+class Child1(Parent):
+    pass
+
+class Child2(Parent):
+    pass
+
+obj = Child2()
+obj.greet()
+
+obj2 = Child1()
+obj2.greet()
+
+
+
+
+class Account:
+    def __init__(self,name,balance):
+        self.name=name
+        self.balance=balance
+        
+    def Details(self):
+        print(f"Hello {self.name} you have {self.balance}")
+        
+class Saving(Account):
+    def __init__(self,name,balance):
+        super().__init__(name,balance)
+        print(f" This is a Saving Class Constructor {self.name} , {self.balance} ")
+        
+class Current(Account):
+    def __init__(self,name,balance,type):
+        super().__init__(name,balance)
+        self.type = type
+        print(f" This is a Current Class Constructor {self.name} , {self.balance} , {self.type}")
+        
+obj = Current("shivansh" , 800 , "Saving For Her")
