@@ -1,10 +1,10 @@
 # INHERITANCE
 '''
-1. Single Inheritance
-2. Multiple Inheritance
-3. Multi-level Inheritance
-4. Hierarchichal Inheritance
-5. Hybrid Inheritance
+1. Single Inheritance --> 1 Parent and 1 Child Class
+2. Multiple Inheritance --> 2 Parent and 1 Child class
+3. Multi-level Inheritance --> One child class becomes parent of another class
+4. Hierarchichal Inheritance --> 1 Parent class and multiple Child Class
+5. Hybrid Inheritance --> Combination of two types of Inheritance
 '''
 
 # 1. SINGLE INHERITANCE
